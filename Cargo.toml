@@ -1,0 +1,9 @@
+[package]
+name = "mise-address-client"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.98"
+menu = { git = "https://github.com/rileyhernandez/menu.git", features = ["address"] }
+network-interface = "2.0.2"
