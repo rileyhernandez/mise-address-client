@@ -42,6 +42,9 @@ fn get_ip_addr() {
 
     match wireless_ip {
         Some(ip) => println!("Found wireless IPv4 address: {}", ip),
-        None => println!("Could not find a wireless IPv4 address."),
+        None => {
+            println!("Could not find a wireless IPv4 address.");
+            println!("Interfaces: {:?}", network_interfaces);
+        },
     }
 }
