@@ -9,7 +9,7 @@ fn main() -> Result<()> {
     let home = std::env::home_dir().ok_or(anyhow!("no home directory"))?;
     let path = home.join(".config/libra/config.toml");
     let auth_token = std::env::var("AUTH_TOKEN")?;
-    let libras = Libra::read_as_vec(&path)?;
+    // let libras = Libra::read_as_vec(&path)?;
     let backend = ConfigBackend::new(BACKEND_URL.into(), auth_token);
     // let addresses: Result<Vec<String>> = libras.iter().map(|libra| {
     //     backend.get_address(libra.device.clone()).map_err(anyhow::Error::from)
